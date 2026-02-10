@@ -21,4 +21,6 @@ public interface StudentService {
 
 	StudentDTO updatePartialStudent(Long id, Map<String, Object> updates);
 
+	void deleteAll();
+
 }

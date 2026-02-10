@@ -108,6 +108,14 @@ public class StudentServiceImpl implements StudentService{
 		Student saveStudent = studentRepo.save(student);
 		return modelMapper.map(saveStudent, StudentDTO.class);
 	}
+
+
+
+	@Override
+	public void deleteAll() {
+		studentRepo.deleteAll();
+		
+	}
 	
 	
 

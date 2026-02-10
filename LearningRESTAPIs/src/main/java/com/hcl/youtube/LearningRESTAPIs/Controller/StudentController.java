@@ -51,6 +51,12 @@ public class StudentController {
 		return ResponseEntity.noContent().build();
 	}
 	
+	@DeleteMapping
+	public ResponseEntity<Void> DeleteAll(){
+		studentService.deleteAll();
+		return ResponseEntity.noContent().build();
+	}
+	
 	@PutMapping("{id}")
 	public ResponseEntity<StudentDTO> updateStudent(@PathVariable Long id, @RequestBody @Valid AddStudentRequestDto addStudentRequestDto){
 		return ResponseEntity.ok(studentService.updateStudent(id,addStudentRequestDto));
